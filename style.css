@@ -83,7 +83,9 @@ input {
 }
 
 button {
-  background: rgba(145, 78, 2, 0.5);
+  -webkit-box-shadow: 3px 3px 10px #333;
+          box-shadow: 3px 3px 10px #333;
+  background: rgba(3, 3, 3, 0.18);
 }
 
 input:focus {
@@ -91,18 +93,6 @@ input:focus {
   -webkit-box-shadow: 3px 3px 10px #333;
           box-shadow: 3px 3px 10px #333;
   background: rgba(3, 3, 3, 0.18);
-}
-
-/* Link */
-a {
-  font-family: 'Open Sans Condensed', sans-serif;
-  text-align: center;
-  padding: 4px 8px;
-  background: rgba(107, 255, 3, 0.3);
-}
-
-a:hover {
-  opacity: 0.7;
 }
 
 select {
