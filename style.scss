@@ -93,12 +93,14 @@ input:focus {
 }
 
 select {
-    background-color: transparent;
+    background: transparent;
     color: white;
+    font-family: inherit;
+    font-size: 15px;
 }
 
 option {
-    background-color: black;
+    background: rgba(3, 3, 3, .18);
 }
 
 input[type="checkbox"] {
@@ -108,7 +110,7 @@ input[type="checkbox"] {
     padding: 5px;
     border-radius: 4px;
     background: rgba(3, 3, 3, .2);
-    display: inline-block;
+    display: block;
     width: 20px;
     height: 20px;
 }
