@@ -73,6 +73,7 @@ const formSubmit = (event) => {
 const inputEvent = (event) => {
 
     let whichInput = event.target.getAttribute("name");
+    let et = event.target;
     const fName = document.querySelector(`input[name="firstName"]`)
     const tryForm = et.closest("#form");
     console.log(tryForm);
