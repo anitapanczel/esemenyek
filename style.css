@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /*
 + 1. kellő távolság legyen a beviteli mezők között
 + 2. elég nagy legyen az input mező
@@ -14,133 +13,129 @@
 11. legyen megnevezve a form
 12.font
 */
-
 body {
-    background: url("unsplash.jpg") no-repeat center center fixed;
-    background-size: cover;
-    overflow: hidden;
-    color: #ddd;
-    font-family: 'Lora', serif;
+  background: url("unsplash.jpg") no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+  color: #ddd;
+  font-family: 'Lora', serif;
 }
 
 img {
-    display: block;
-    margin: auto;
-    width: 100%;
-    height: auto;
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: auto;
 }
 
 #root {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    padding: 5%;
-    width: 30vw;
-    height: 70%;
-    text-align: center;
-    border-radius: 5px;
-    background: rgba(3, 3, 3, 0.25);
-    -webkit-box-shadow: 1px 1px 50px #000;
-    box-shadow: 1px 1px 50px #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 5%;
+  width: 30vw;
+  height: 70%;
+  text-align: center;
+  border-radius: 5px;
+  background: rgba(3, 3, 3, 0.25);
+  -webkit-box-shadow: 1px 1px 50px #000;
+          box-shadow: 1px 1px 50px #000;
 }
 
 @media (max-width: 1000px) and (min-width: 651px) {
-    #root {
-        width: 40vw;
-    }
+  #root {
+    width: 40vw;
+  }
 }
 
 @media (max-width: 650px) {
-    #root {
-        width: 80vw;
-    }
+  #root {
+    width: 80vw;
+  }
 }
 
 h1 {
-    position: relative;
-    margin-top: 0px;
-    text-align: center;
-    font-size: 40px;
-    color: #ddd;
-    text-shadow: 3px 3px 10px #000;
+  position: relative;
+  margin-top: 0px;
+  text-align: center;
+  font-size: 40px;
+  color: #ddd;
+  text-shadow: 3px 3px 10px #000;
 }
 
 button,
 input {
-    text-decoration: none;
-    position: relative;
-    display: block;
-    width: 50%;
-    margin: 9px auto;
-    text-align: center;
-    font-size: 15px;
-    color: #fff;
-    padding: 8px;
-    border-radius: 6px;
-    border: #fff 1px solid;
-    background: rgba(3, 3, 3, 0.1);
-    cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  width: 50%;
+  margin: 9px auto;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+  padding: 8px;
+  border-radius: 6px;
+  border: #fff 1px solid;
+  background: rgba(3, 3, 3, 0.1);
 }
 
 button {
-    -webkit-box-shadow: 3px 3px 10px #333;
-    box-shadow: 3px 3px 10px #333;
-    background: rgba(3, 3, 3, 0.18);
+  -webkit-box-shadow: 3px 3px 10px #333;
+          box-shadow: 3px 3px 10px #333;
+  background: rgba(3, 3, 3, 0.18);
 }
 
 input:focus {
-    outline: none;
-    -webkit-box-shadow: 3px 3px 10px #333;
-    box-shadow: 3px 3px 10px #333;
-    background: rgba(3, 3, 3, 0.18);
+  outline: none;
+  -webkit-box-shadow: 3px 3px 10px #333;
+          box-shadow: 3px 3px 10px #333;
+  background: rgba(3, 3, 3, 0.18);
 }
 
 select {
-    background: transparent;
-    color: #ddd;
-    font-family: inherit;
-    font-size: 15px;
+  background: transparent;
+  color: white;
+  font-family: inherit;
+  font-size: 15px;
 }
 
 option {
-    background: rgba(3, 3, 3, 0.18);
+  background: rgba(3, 3, 3, 0.18);
 }
 
 input[type="checkbox"] {
-    position: relative;
-    cursor: pointer;
-    -webkit-appearance: none;
-    padding: 5px;
-    border-radius: 4px;
-    background: rgba(3, 3, 3, 0.2);
-    display: block;
-    width: 20px;
-    height: 20px;
+  position: relative;
+  cursor: pointer;
+  -webkit-appearance: none;
+  padding: 5px;
+  border-radius: 4px;
+  background: rgba(3, 3, 3, 0.2);
+  display: block;
+  width: 20px;
+  height: 20px;
 }
 
 input[type="checkbox"]:checked:active {
-    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 input[type="checkbox"]:checked {
-    background: rgba(3, 3, 3, 0.4);
-    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.5);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.5);
-    color: #fff;
+  background: rgba(3, 3, 3, 0.4);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.5);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.5);
+  color: #fff;
 }
 
 input[type="checkbox"]:checked:after {
-    content: '\2714';
-    font-size: 10px;
-    position: absolute;
-    top: 0px;
-    left: 4px;
-    color: #fff;
+  content: '\2714';
+  font-size: 10px;
+  position: absolute;
+  top: 0px;
+  left: 4px;
+  color: #fff;
 }
-
-
 /*# sourceMappingURL=style.css.map */
