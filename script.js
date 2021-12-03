@@ -58,6 +58,32 @@ const nameData = {
 };
 */
 
+const processCountries = async() => {
+    const countryRes = await fetch("https://restcountries.com/v3.1/all");
+    const countryArr = await countryRes.json();
+    console.log(countryArr[0].name.official);
+    // 1. kell egy üres tömb 
+
+    // 2. for ciklussal végig kell menni a countryArr-on és minden országnak a name.official-jét bele kell rakni az üres tömbbe 
+
+    // 3. returnölni ezt a tömböt (végeredmény legördülő menübe megy az országok listája)
+
+    // 4. ennyi, nincs tovább, 10 perc szünet, return 10:45
+
+}
+
+//processCountries();
+
+const anotherSelectFields = {
+    type: "select",
+    name: "countries",
+    label: "Ország",
+    //options: ["Luxembourg", "Jamaica"]
+    options: processCountries()
+}
+
+
+
 const anotherFormFields = [{
     type: "text",
     name: "street",
@@ -75,6 +101,13 @@ const anotherFormFields = [{
     name: "city",
     label: "Település neve"
 }];
+
+const selectFields = {
+    type: "select",
+    name: "where",
+    label: "Hol hallottál rólunk?",
+    options: ["internetről", "ismerőstől", "egyéb"]
+};
 
 const formFields = [{
     type: "text",
@@ -114,7 +147,7 @@ const formElement = `
 `;
 */
 
-const formElement = (ffs, id) => {
+const formElement = (ffs, id, sel) => {
     let toForm = "";
     for (const ff of ffs) {
         toForm += inputElement(ff.type, ff.name, ff.label, ff.required);
@@ -124,7 +157,7 @@ const formElement = (ffs, id) => {
         <form>
         <h1>Login ${id}</h1>
             ${toForm}
-            ${ selectElement("select", "where", "Hol hallottál rólunk?", ["internetről", "ismerőstől", "egyéb"]) }
+            ${selectElement(sel.type, sel.name, sel.label, sel.options)}
             <button id="gomb">OK</button>
         </form>
         </div>`
@@ -161,8 +194,8 @@ const inputEvent = (event) => {
 
 function loadEvent() {
     const root = document.getElementById("root");
-    root.insertAdjacentHTML("beforeend", formElement(formFields, "form"));
-    root.insertAdjacentHTML("beforeend", formElement(anotherFormFields, "form2"));
+    root.insertAdjacentHTML("beforeend", formElement(formFields, "form", selectFields));
+    root.insertAdjacentHTML("beforeend", formElement(anotherFormFields, "form2", anotherSelectFields));
     root.insertAdjacentHTML("beforeend", `
     <div id="inputValueContent"></div>
     `);
